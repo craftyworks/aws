@@ -50,6 +50,9 @@ Amazon Linux 2 선택
 
 인스턴스 시작
 
+Tag 추가
+    - Name : mondrian-lab-ec2
+    
 ## 탄력적 IP
 
 1. 탄력적IP 주소할당
@@ -94,6 +97,28 @@ sudo yum list | grep java-1.8
 sudo yum install java-1.8.0-openjdk-devel.x86_64
 ```
 
+### Git 설치
+```bash 
+sudo yum install git
+```
+
+Git 설정
+
+``` bash
+git config --global user.email "craftyworks@gmail.com"
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global core.autocrlf true
+git config --global credential.helper store
+git config --global http.sslVerify false
+git config --global core.quotepath false    
+```
+
+Git 설정 확인
+
+git config --global --list
 ### 타임존 변경
 ```bash
 sudo rm /etc/localtime
@@ -109,7 +134,7 @@ HOSTNAME 추가
 ```
 NETWORKING=yes
 NOZEROCONF=yes
-HOSTNAME=gitabout
+HOSTNAME=gitabout.com
 ```
 
 ### hosts 파일 수정
@@ -118,12 +143,10 @@ sudo vim /etc/hosts
 ```
 
 ```
-127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+127.0.0.1   gitabout.com localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1         localhost6 localhost6.localdomain6
-
-127.0.0.1   gitabout
 ```
 
-## 재부팅
+### 재부팅
 sudo reboot
 

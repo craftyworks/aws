@@ -22,17 +22,19 @@
 
 mondrian-mariadb 편집
 
-character_set_client		utf8mb4
-character_set_connection		utf8mb4
-character_set_database		utf8mb4
-character_set_filesystem		utf8mb4
-character_set_results		utf8mb4
-character_set_server		utf8mb4
-collation_connection		utf8mb4_general_ci
-collation_server		utf8mb4_general_ci
-time_zone		Asia/Seoul
-max_connections 150
-lower_case_table_names 1
+| Property | Value |
+|---|---|
+character_set_client | utf8mb4
+character_set_connection | utf8mb4
+character_set_database | utf8mb4
+character_set_filesystem | utf8mb4
+character_set_results | utf8mb4
+character_set_server | utf8mb4
+collation_connection | utf8mb4_general_ci
+collation_server | utf8mb4_general_ci
+time_zone | Asia/Seoul
+max_connections | 150
+lower_case_table_names | 1
 
 > utf8mb4 는 이모지 저장 가능 
 
