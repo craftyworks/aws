@@ -117,6 +117,25 @@ github 에서 소스를 내려받아 빌드를 수행.
     - AWS Code Deploy
     - mondrianlab-codedeploy
     
+## Code Pipeline Schedule
+
+1. 파이트라인 ARN 확인
+    - 파이프라인 > 설정 > 파이프라인 ARN
+
+1. Amazon Event Bridge
+    - 규칙 생성
+
+1. 규칙
+    - 이름: event-mondrian-lab-boot-pipeline
+    - 패턴정의
+        - 일정
+        - cron: 0 7 * * ? * (분 시 일 월 요일 년)
+
+    - 대상선택
+        - CodePipeline
+        - 파이프라인 ARN 등록
+            
+
         
     
 
